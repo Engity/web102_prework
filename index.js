@@ -27,27 +27,33 @@ const gamesContainer = document.getElementById("games-container");
 
 // create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
+    // set the inner HTML using a template literal to display some info 
+    // about each game
+    // TIP: if your images are not displaying, make sure there is space
+    // between the end of the src attribute and the end of the tag ("/>")
 
-    // loop over each item in the data
 
-
+    // append the game to the games-container
+    games.forEach((game) => {// loop over each item in the data
         // create a new div element, which will become the game card
 
+        let newGameDiv = document.createElement("div");
+        newGameDiv.classList.add("game-card");
+        
+        newGameDiv.innerHTML = `
+            <h1>${game.name}</h1>
+            <p><b>Description:</b> ${game.description}</p>
+            <img class="game-img" src = "${game.img}" > 
+        `;
 
         // add the class game-card to the list
-
-
-        // set the inner HTML using a template literal to display some info 
-        // about each game
-        // TIP: if your images are not displaying, make sure there is space
-        // between the end of the src attribute and the end of the tag ("/>")
-
-
-        // append the game to the games-container
-
+        gamesContainer.appendChild(newGameDiv);
+       
+    });
 }
 
 // call the function we just defined using the correct variable
+addGamesToPage(GAMES_JSON);
 // later, we'll call this function using a different list of games
 
 
@@ -144,7 +150,7 @@ const descriptionContainer = document.getElementById("description-container");
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+const sortedGames = GAMES_JSON.sort((item1, item2) => {
     return item2.pledged - item1.pledged;
 });
 
