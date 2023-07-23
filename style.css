@@ -76,3 +76,13 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+.filter-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
+
+.filter-button:active {
+    cursor: grab;
+    box-shadow: 0 0 30px red;
+}
