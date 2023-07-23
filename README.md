@@ -1,6 +1,6 @@
 # WEB102 Prework - Sea Monster Crowdfunding Dashboard
 
-Submitted by: Toan Nguyen
+Submitted by: Thomas Nguyen
 
 Sea Monster Crowdfunding Dashboard is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
@@ -32,7 +32,7 @@ Describe any challenges encountered while building the app.
 - N/A
 
 ## License
-    Copyright [2023] [Toan Nguyen]
+    Copyright [2023] [Thomas Nguyen]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
